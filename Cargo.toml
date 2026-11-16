@@ -1,0 +1,18 @@
+[package]
+name = "yolox-ppe-cpu"
+version = "0.1.0"
+edition = "2021"
+# usize::div_ceil is stable since 1.73
+rust-version = "1.73"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "yolox-ppe-cpu"
+path = "src/main.rs"
+
+[dependencies]
+openvino = "0.8"
+anyhow = "1.0"
+image = { version = "0.25", default-features = false, features = ["png", "jpeg"] }
